@@ -1,0 +1,90 @@
+#include <Wire.h>
+#include <WiFi.h>
+#include <TinyGPS++.h>
+#include <SoftwareSerial.h>
+#include <ESP32CAM.h>
+#include <FirebaseESP32.h>
+
+// WiFi Credentials
+#define WIFI_SSID "your_SSID"
+#define WIFI_PASSWORD "your_PASSWORD"
+
+// Firebase Credentials
+#define FIREBASE_HOST "your_firebase_project_url"
+#define FIREBASE_AUTH "your_firebase_auth_key"
+
+FirebaseData firebaseData;
+
+// GSM & GPS Setup
+static const int RXPin = 3, TXPin = 2;
+static const uint32_t gps_baudrate = 9600;
+TinyGPSPlus gps;
+SoftwareSerial soft(RXPin, TXPin);
+SoftwareSerial mySerial(9, 10);
+
+String textMessage;
+float Lat, Lon;
+
+void setup() {
+    Serial.begin(115200);
+    soft.begin(gps_baudrate);
+    mySerial.begin(19200);
+    
+    // Connect to WiFi
+    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+    while (WiFi.status() != WL_CONNECTED) {
+        delay(500);
+        Serial.print(".");
+    }
+    Serial.println("\nWiFi Connected!");
+
+    // Connect to Firebase
+    Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
+    Firebase.reconnectWiFi(true);
+
+    ESP32CAM.begin();  // Initialize ESP32-CAM
+}
+
+void loop() {
+    // Read GPS location
+    while (soft.available() > 0) {
+        gps.encode(soft.read());
+        if (gps.location.isUpdated()) {
+            Lat = gps.location.lat();
+            Lon = gps.location.lng();
+        }
+    }
+int key = digitalRead(12);
+    if (key == 1) {
+        digitalWrite(4, HIGH);
+        sendsms2();
+        captureAndUploadImage();
+        digitalWrite(4, LOW);
+    }
+
+    delay(5000);
+}
+
+// Function to send alert message via GSM
+void sendsms2() {
+    mySerial.println("AT+CMGF=1\r");
+    delay(1000);
+    mySerial.println("AT+CMGS=\"‪+918169489176‬\"");
+    delay(1000);
+    mySerial.println("I AM IN DANGER, HELP!! ");
+    delay(500);
+    mySerial.println("Location: Lat=" + String(Lat, 3) + ", Lon=" + String(Lon, 3));
+    delay(500);
+    mySerial.println((char)26);
+    delay(1000);
+}
+
+// Function to capture image and upload to Firebase
+void captureAndUploadImage() {
+    Serial.println("Capturing Image...");
+    ESP32CAM.takePicture();
+ if (ESP32CAM.pictureReady()) {
+        Serial.println("Uploading Image...");
+        Firebase.setBlob(firebaseData, "/alert_image", ESP32CAM.getPicture(), ESP32CAM.pictureSize());
+    }
+}
