@@ -2,7 +2,7 @@
 **A Silent guardian which listens when none listens and which acts  before it's too late.**
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=1000&color=0F62FE&center=true&width=1000&lines=SHIELD+—+A+SMART+GUARDIAN;LIVE+STREAMING+%7C+CALL+%7C+LIVE+LOCATION+%7C+SOS+ALERT+MESSAGE;WI-FI+%2F+BLUETOOTH+%7C+SD+CARD+STORAGE" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=1000&color=0F62FE&width=1000&lines=SHIELD+—+A+SMART+GUARDIAN" alt="Typing SVG" />
 </p>
 
 
