@@ -1,11 +1,9 @@
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&weight=800&duration=7000&pause=1000&color=002D9C&vCenter=false&width=1000&lines=SHIELD+—+A+SMART+GUARDIAN;LIVE+STREAMING+%7C+CALL+%7C+LIVE+LOCATION+%7C+SOS+ALERT+MESSAGE;WITH+WI-FI+%7C+BLUETOOTH+CAPABILITIES)
+
+
 # 106_SHIELD
+
 **A Silent guardian which listens when none listens and which acts  before it's too late.**
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&pause=1000&color=0F62FE&width=1000&lines=SHIELD+—+A+SMART+GUARDIAN" alt="Typing SVG" />
-</p>
-
-
 **SHIELD** is a compact and intelligent safety system designed to send emergency alerts, share live video feed, capture and store images, and track real-time location. It integrates Wi-Fi, Bluetooth, and GSM/GPS functionalities using ESP32-CAM and SIMCom A9G modules.
 
 ## Overview
@@ -54,5 +52,22 @@ This project is designed to provide a multi-functional security solution capable
    - The camera starts live streaming over Wi-Fi.
    - Stream link can also be shared via Bluetooth or email.
 
+
+## Future Enhancements
+
+- Integration with face detection or motion detection
+- Cloud-based image storage (Firebase, AWS)
+- Battery optimization for long-term deployment
+- Development of a companion mobile application
+
+---
+
+## Author
+**(TEAM CODEWIZARDS)**
+**Zainab Jahan Umaima**  
+Second Year Undergraduate  
+Methodist College of Engineering  
+Email: thezainabjahan14@gmail.com 
+LinkedIn:www.linkedin.com/in/zayjaumaima
 
 
