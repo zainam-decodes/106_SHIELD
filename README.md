@@ -1,4 +1,4 @@
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&weight=800&duration=7000&pause=1000&color=002D9C&vCenter=false&width=1000&lines=SHIELD+—+A+SMART+GUARDIAN;LIVE+STREAMING+%7C+CALL+%7C+LIVE+LOCATION+%7C+SOS+ALERT+MESSAGE;WITH+WI-FI+%7C+BLUETOOTH+CAPABILITIES)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&weight=900&duration=7000&pause=1000&color=002D9C&vCenter=false&width=1000&lines=SHIELD+—+A+SMART+GUARDIAN+(DUAL+ACTIVATION+MECHANISM);LIVE+STREAMING+%7C+CALL+%7C+LIVE+LOCATION+%7C+SOS+ALERT+MESSAGE;WITH+WI-FI+%7C+BLUETOOTH+CAPABILITIES)
 
 # 106_SHIELD
 
@@ -9,7 +9,7 @@
 
 This project is designed to provide a multi-functional security solution capable of:
 
-- Triggering an SOS alert via push button or sound sensor
+- Triggering an SOS alert via push button or sound sensor 
 - Sending SMS with live GPS coordinates and stream link
 - Initiating automatic calls in emergencies
 - Capturing images and storing them on an SD card
@@ -19,7 +19,7 @@ This project is designed to provide a multi-functional security solution capable
 
 ## Features
 
-- SOS alert trigger (button or voice/sound)
+- SOS alert trigger (button or voice/sound) - DUAL ACTIVATION MECHANISM
 - Automatic image capture and storage
 - Real-time GPS location tracking using SIMCom A9G
 - SMS and call alerts
