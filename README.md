@@ -1,6 +1,5 @@
 ![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&weight=800&duration=7000&pause=1000&color=002D9C&vCenter=false&width=1000&lines=SHIELD+—+A+SMART+GUARDIAN;LIVE+STREAMING+%7C+CALL+%7C+LIVE+LOCATION+%7C+SOS+ALERT+MESSAGE;WITH+WI-FI+%7C+BLUETOOTH+CAPABILITIES)
 
-
 # 106_SHIELD
 
 **A Silent guardian which listens when none listens and which acts  before it's too late.**
